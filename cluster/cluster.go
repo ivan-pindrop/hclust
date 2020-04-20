@@ -4,7 +4,7 @@ package cluster
 import (
 	"errors"
 
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/typedef"
 )
 
 // Cluster clusters a square symmetric matrix and returns a dendrogram. Linkage

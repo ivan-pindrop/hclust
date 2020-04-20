@@ -14,7 +14,7 @@ func TestDistMetric(t *testing.T) {
 	}
 
 	// TEST1: binary.
-	distMetric := DistMetric("binary")
+	distMetric := Binary
 	want := []float64{0, 0.5, 0.75}
 	_, err := distMetric([]float64{1, 2}, []float64{0, 3, 5})
 	assert.NotNil(t, err, "Vectors of different length should return an error")
@@ -25,7 +25,7 @@ func TestDistMetric(t *testing.T) {
 	}
 
 	// TEST2: canberra.
-	distMetric = DistMetric("canberra")
+	distMetric = Canberra
 	want = []float64{1.32, 2.83, 3.45}
 	_, err = distMetric([]float64{1, 2}, []float64{0, 3, 5})
 	assert.NotNil(t, err, "Vectors of different length should return an error")
@@ -36,7 +36,7 @@ func TestDistMetric(t *testing.T) {
 	}
 
 	// TEST3: jaccard.
-	distMetric = DistMetric("jaccard")
+	distMetric = Jaccard
 	want = []float64{0.63, 0.73, 0.83}
 	_, err = distMetric([]float64{1, 2}, []float64{0, 3, 5})
 	assert.NotNil(t, err, "Vectors of different length should return an error")
@@ -47,7 +47,7 @@ func TestDistMetric(t *testing.T) {
 	}
 
 	// TEST4: manhattan.
-	distMetric = DistMetric("manhattan")
+	distMetric = Manhattan
 	want = []float64{10, 8, 14}
 	_, err = distMetric([]float64{1, 2}, []float64{0, 3, 5})
 	assert.NotNil(t, err, "Vectors of different length should return an error")
@@ -58,7 +58,7 @@ func TestDistMetric(t *testing.T) {
 	}
 
 	// TEST5: maximum.
-	distMetric = DistMetric("maximum")
+	distMetric = Maximum
 	want = []float64{5, 2, 5}
 	_, err = distMetric([]float64{1, 2}, []float64{0, 3, 5})
 	assert.NotNil(t, err, "Vectors of different length should return an error")
@@ -69,7 +69,7 @@ func TestDistMetric(t *testing.T) {
 	}
 
 	// TEST5: euclidean.
-	distMetric = DistMetric("euclidean")
+	distMetric = Euclidean
 	want = []float64{6.48, 4, 7.75}
 	_, err = distMetric([]float64{1, 2}, []float64{0, 3, 5})
 	assert.NotNil(t, err, "Vectors of different length should return an error")
@@ -79,14 +79,15 @@ func TestDistMetric(t *testing.T) {
 		assert.InDeltaf(t, want[i], dist, 0.01, "Euclidean distance is not correct")
 	}
 
-	// TEST5: default = euclidean.
-	distMetric = DistMetric("")
-	want = []float64{6.48, 4, 7.75}
+	// TEST5: cosine.
+	distMetric = Cosine
+	want = []float64{0.339975, 0.417818, 0.521529}
 	_, err = distMetric([]float64{1, 2}, []float64{0, 3, 5})
 	assert.NotNil(t, err, "Vectors of different length should return an error")
 	for i, test := range tests {
 		dist, testErr := distMetric(test["x"], test["y"])
 		assert.Nil(t, testErr, "Valid input vectors should not return an error")
-		assert.InDeltaf(t, want[i], dist, 0.01, "Euclidean distance is not correct")
+		assert.InDeltaf(t, want[i], dist, 0.01, "Cosine distance is not correct")
 	}
+
 }

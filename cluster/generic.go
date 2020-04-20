@@ -4,9 +4,9 @@ import (
 	"math"
 	"sort"
 
-	"github.com/knightjdr/hclust/matrixop"
-	"github.com/knightjdr/hclust/tree"
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/matrixop"
+	"github.com/ivan-pindrop/hclust/tree"
+	"github.com/ivan-pindrop/hclust/typedef"
 )
 
 // neighborInfo stores information about a nodes nearest neighbor.

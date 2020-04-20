@@ -3,7 +3,7 @@ package tree
 import (
 	"errors"
 
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/typedef"
 )
 
 // Tree references a tree in newick format and the leaf order.

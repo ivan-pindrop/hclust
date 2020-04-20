@@ -2,7 +2,7 @@
 package dendrogram
 
 import (
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/typedef"
 )
 
 // GetNodeHeight gets the height for each node by summing branch lengths.

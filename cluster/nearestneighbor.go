@@ -3,9 +3,9 @@ package cluster
 import (
 	"math"
 
-	"github.com/knightjdr/hclust/matrixop"
-	"github.com/knightjdr/hclust/tree"
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/matrixop"
+	"github.com/ivan-pindrop/hclust/tree"
+	"github.com/ivan-pindrop/hclust/typedef"
 )
 
 // NearestNeighbor clusters a distance matrix using one of the following linkage

@@ -19,7 +19,7 @@ func TestDistance(t *testing.T) {
 		{18, 0, 17.8},
 		{13.8, 17.8, 0},
 	}
-	dist := Distance(matrix, "maximum", false)
+	dist := Distance(matrix, Maximum, false)
 	// Iterate over rows to compare
 	for i, row := range dist {
 		assert.InDeltaSlice(t, want[i], row, 0.01, "Distance matrix not correct")
@@ -32,7 +32,7 @@ func TestDistance(t *testing.T) {
 		{23, 17.8, 0, 12.2},
 		{22.6, 17.4, 12.2, 0},
 	}
-	dist = Distance(matrix, "maximum", true)
+	dist = Distance(matrix, Maximum, true)
 	// Iterate over rows to compare
 	for i, row := range dist {
 		assert.InDeltaSlice(t, want[i], row, 0.01, "Distance of transposed matrix not correct")

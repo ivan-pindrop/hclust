@@ -2,13 +2,13 @@
 package hclust
 
 import (
-	"github.com/knightjdr/hclust/cluster"
-	"github.com/knightjdr/hclust/dendrogram"
-	"github.com/knightjdr/hclust/distance"
-	"github.com/knightjdr/hclust/optimize"
-	"github.com/knightjdr/hclust/sort"
-	"github.com/knightjdr/hclust/tree"
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/cluster"
+	"github.com/ivan-pindrop/hclust/dendrogram"
+	"github.com/ivan-pindrop/hclust/distance"
+	"github.com/ivan-pindrop/hclust/optimize"
+	"github.com/ivan-pindrop/hclust/sort"
+	"github.com/ivan-pindrop/hclust/tree"
+	"github.com/ivan-pindrop/hclust/typedef"
 )
 
 // Cluster references the main cluster method in the cluster subpackage.

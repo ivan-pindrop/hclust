@@ -1,6 +1,6 @@
 package tree
 
-import "github.com/knightjdr/hclust/typedef"
+import "github.com/ivan-pindrop/hclust/typedef"
 
 type union struct {
 	Length    []float64

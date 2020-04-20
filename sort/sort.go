@@ -4,7 +4,7 @@ package sort
 import (
 	"errors"
 
-	"github.com/knightjdr/hclust/matrixop"
+	"github.com/ivan-pindrop/hclust/matrixop"
 )
 
 // Sort takes a 2D matrix and sorts based on the columns or rows. A vector of

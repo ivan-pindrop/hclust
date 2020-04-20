@@ -3,7 +3,7 @@ package dendrogram
 import (
 	"testing"
 
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/typedef"
 	"github.com/stretchr/testify/assert"
 )
 

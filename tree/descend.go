@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/typedef"
 )
 
 // Level is for building the newick array and leaf order at the level of the

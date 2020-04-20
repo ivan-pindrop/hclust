@@ -16,11 +16,11 @@ optimization is performed using the improved optimization approach of
 
 ## Installation
 
-`go get github.com/knightjdr/hclust`
+`go get github.com/ivan-pindrop/hclust`
 
 ## Usage
 
-`import "github.com/knightjdr/hclust"`
+`import "github.com/ivan-pindrop/hclust"`
 
 ### Distance
 

@@ -5,8 +5,8 @@ import (
 	"math"
 	"sort"
 
-	"github.com/knightjdr/hclust/matrixop"
-	"github.com/knightjdr/hclust/typedef"
+	"github.com/ivan-pindrop/hclust/matrixop"
+	"github.com/ivan-pindrop/hclust/typedef"
 )
 
 type constraints struct {

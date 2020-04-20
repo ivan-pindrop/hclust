@@ -1,16 +1,13 @@
 // Package distance contains methods to generate a distance matrix.
 package distance
 
-import "github.com/knightjdr/hclust/matrixop"
+import "github.com/ivan-pindrop/hclust/matrixop"
 
 // Distance generates a square matrix of distance values calculated between row
 // vectors of an input matrix. Setting tranpose to true will calculate the distance matrix for
 // column vectors instead. Distance metric options are: binary, canberra, euclidean, jaccard,
 // manhattan and maximum.
-func Distance(matrix [][]float64, metric string, transpose bool) (dist [][]float64) {
-	// Get distance function.
-	distMetric := DistMetric(metric)
-
+func Distance(matrix [][]float64, distMetric DistMetric, transpose bool) (dist [][]float64) {
 	// Transpose matrix if requested.
 	if transpose {
 		matrix = matrixop.Transpose(matrix)
